@@ -15,7 +15,6 @@ class DB(object):
         self.createOrFindDB()
         
     def addEntry(self, entry_vector, entry_data):
-        #print(f"entry_vector : {entry_vector}")
         vector = []
         for key, val in entry_vector.items():
             if val:
@@ -29,7 +28,6 @@ class DB(object):
                 array_map_val = 0
             vector.append(array_map_val)
         vector = tuple(vector)
-        #print(f"Vector : {vector}")
         self.insert(vector, entry_data)
         
     def insert(self, vector, entry_data):

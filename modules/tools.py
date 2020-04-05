@@ -118,7 +118,8 @@ def analyze(search_result):
     arr = np.array(search_result)
     print(arr)
     if len(arr) != 0:
-        survival = arr[:,0].astype(int)
+        survival = [i for i in arr[:,0] if i is not None]
+        survival = [1 if i else 0 for i in survival]
         days_to_recovery = [i for i in arr[:,1] if i]
         days_of_ventilation = [i for i in arr[:,2] if i]
         days_of_icu = [i for i in arr[:,3] if i]

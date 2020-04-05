@@ -1,0 +1,5 @@
+matplotlib
+progressbar2
+flask
+waitress
+gunicorn==20.0.4
